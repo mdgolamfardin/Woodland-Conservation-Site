@@ -10,7 +10,8 @@ The purpose of this file is to use some plain CSS to simplify the code.
 /* Global styles for the `body` element */
 body {
   margin: 0;                      /* Removes default margin around the page */
-  font-family: Calibri;           /* Sets the font to Calibri */
+  font-family:Arial, Helvetica, sans-serif;           /* Sets the font to Arial */
+
 }
 
 /* Class to hide the mobile navigation menu */
