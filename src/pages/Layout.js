@@ -9,8 +9,9 @@ export default function Layout() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <div className="flex py-4"> {/* Container for the navigation and main content */}
-      <nav>
+    <div className="flex bg-navbarBg w-full pt-6"> {/* Container for the navigation and main content */}
+      <h1 className="text-4xl font-light text-white pb-4 px-14  w-full">Woodland Conservation</h1>
+      <nav className="bg-navbarBg w-full pt-3 ">
         {/* MOBILE MENU SECTION */}
         <section className="MOBILE-MENU flex lg:hidden"> {/* Mobile menu visible only on small screens */}
           <div
@@ -66,21 +67,21 @@ export default function Layout() {
         </section>
 
         {/* DESKTOP MENU SECTION */}
-        <ul className="DESKTOP-MENU hidden space-x-16 lg:flex"> {/* Visible only on large screens */}
+        <ul className="DESKTOP-MENU hidden space-x-12 lg:flex justify-end pr-28"> {/* Visible only on large screens */}
           <li>
-            <Link to="/">About</Link>
+            <Link to="/" className="text-white text-lg">About</Link>
           </li>
           <li>
-            <Link to="/gallery">Gallery</Link>
+            <Link to="/gallery" className="text-white text-lg">Gallery</Link>
           </li>
           <li>
-            <Link to="/ecosystem">Ecosystem</Link>
+            <Link to="/ecosystem" className="text-white text-lg">Ecosystem</Link>
           </li>
           <li>
-            <Link to="/sitemap">Site Map</Link>
+            <Link to="/sitemap" className="text-white text-lg">Site Map</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" className="text-white text-lg">Contact</Link>
           </li>
         </ul>
       </nav>
