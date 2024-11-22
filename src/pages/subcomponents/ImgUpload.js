@@ -3,14 +3,14 @@
 const ImgUpload = () => {
     return (
         // Return the JSX for rendering the ImgUpload subcomponent
-        <div className="relative top-10">
+        <div className="">
             {/* A heading describing the purpose of the subcomponent */}
-            <h1 className="relative left-20 top-20 break-normal font-semibold text-4xl text-orange-600">
+            <h1 className="pt-20 mt-20 break-normal font-semibold text-xl text-orange-600">
                 This is the subcomponent for users to post images.
             </h1>
 
             {/* A second heading mentioning who will work on this subcomponent */}
-            <h1 className="relative left-20 top-20 break-normal font-semibold text-4xl text-orange-600">
+            <h1 className="break-normal font-semibold text-xl text-orange-600">
                 Kelly will work on this.
             </h1>
         </div>

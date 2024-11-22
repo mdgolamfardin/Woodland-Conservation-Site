@@ -1,5 +1,5 @@
 // Import necessary components from "react-router-dom"
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 // Import the `useState` hook from React to manage component state
 import { useState } from "react";
 
@@ -7,11 +7,18 @@ export default function Layout() {
   // Define a state variable `isNavOpen` to track whether the mobile menu is open
   // `setIsNavOpen` is used to update the value of `isNavOpen`
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const location = useLocation(); // Get the current URL path
+  const [activeTab, setActiveTab] = useState(location.pathname); // Default active tab
+
+
+  const handleTabClick = (tabName) => {
+    setActiveTab(tabName); // Update the active tab
+  };
 
   return (
-    <div className="flex bg-navbarBg w-full pt-6"> {/* Container for the navigation and main content */}
-      <h1 className="text-4xl font-light text-white pb-4 px-14  w-full">Woodland Conservation</h1>
-      <nav className="bg-navbarBg w-full pt-3 ">
+    <div className="w-full"> {/* Container for the navigation and main content */}
+      <nav className="flex bg-navbarBg w-full">
+        <h2 className="font-nunito text-titleClr text-4xl font-bold pl-32 w-full pt-6 pb-3">Woodland Conservation</h2>
         {/* MOBILE MENU SECTION */}
         <section className="MOBILE-MENU flex lg:hidden"> {/* Mobile menu visible only on small screens */}
           <div
@@ -46,14 +53,14 @@ export default function Layout() {
             </div>
 
             {/* Mobile menu links */}
-            <ul className="MENU-LINK-MOBILE-OPEN flex flex-col">
-              <li className="my-4 uppercase">
+            <ul className="MENU-LINK-MOBILE-OPEN flex flex-col basis-3/5">
+              <li className="uppercase">
                 <Link to="/" onClick={() => setIsNavOpen(false)}>About</Link>
               </li>
-              <li className="my-4 uppercase">
+              <li className="uppercase">
                 <Link to="/gallery" onClick={() => setIsNavOpen(false)}>Gallery</Link>
               </li>
-              <li className="my-4 uppercase">
+              <li className="uppercase">
                 <Link to="/ecosystem" onClick={() => setIsNavOpen(false)}>Ecosystem</Link>
               </li>
               <li className="my-4 uppercase">
@@ -67,27 +74,42 @@ export default function Layout() {
         </section>
 
         {/* DESKTOP MENU SECTION */}
-        <ul className="DESKTOP-MENU hidden space-x-12 lg:flex justify-end pr-28"> {/* Visible only on large screens */}
+        <ul className="DESKTOP-MENU  hidden space-x-8 lg:flex justify-end pt-9 pb-3 pr-32 w-full"> {/* Visible only on large screens */}
           <li>
-            <Link to="/" className="text-white text-lg">About</Link>
+            <Link to="/" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "/" ? "highlight font-bold " : "text-white"
+              }`} onClick={() => handleTabClick("/")}
+            >
+              About</Link>
           </li>
           <li>
-            <Link to="/gallery" className="text-white text-lg">Gallery</Link>
+            <Link to="/gallery" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "/gallery" ? "highlight text-xl font-bold " : "text-white"
+              }`} onClick={() => handleTabClick("/gallery")}
+            >
+              Gallery</Link>
           </li>
           <li>
-            <Link to="/ecosystem" className="text-white text-lg">Ecosystem</Link>
+            <Link to="/ecosystem" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "/ecosystem" ? "highlight font-bold " : "text-white"
+              }`} onClick={() => handleTabClick("/ecosystem")}
+            >
+              Ecosystem</Link>
           </li>
           <li>
-            <Link to="/sitemap" className="text-white text-lg">Site Map</Link>
+            <Link to="/sitemap" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "/sitemap" ? "highlight font-bold " : "text-white"
+              }`} onClick={() => handleTabClick("/sitemap")}
+            >
+              Site Map</Link>
           </li>
           <li>
-            <Link to="/contact" className="text-white text-lg">Contact</Link>
+            <Link to="/contact" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "/contact" ? "highlight font-bold " : "text-white"
+              }`} onClick={() => handleTabClick("/contact")}
+            >
+              Contact</Link>
           </li>
         </ul>
       </nav>
 
       {/* Main content of the current route */}
-      <div className="pt-4">
+      <div className="pt-4 px-28">
         <Outlet /> {/* Placeholder for the child route components */}
       </div>
     </div>
