@@ -21,11 +21,6 @@ function Layer(props) {
       </h2>
       <div className="grid grid-cols-3 gap-10">
         {props.data.map((imgInfo) => createImageCard(imgInfo))}
-
-        {/* Example of hardcoded ImageCards */}
-        <ImageCard url={link} />
-        <ImageCard url={link} />
-        <ImageCard url={link} />
       </div>
       <button className="mt-10 bg-white text-xl text-gray-600 px-6 py-3 rounded-full hover:bg-gray-200">
         Show More
