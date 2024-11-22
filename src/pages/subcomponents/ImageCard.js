@@ -1,14 +1,10 @@
 function ImageCard(props) {
   return (
-      <div className="flex-row space-y-4 bg-white p-5 rounded-xl">
+    <div className="flex-row h-full space-y-4 bg-white p-4 rounded-xl shadow">
       <img className="rounded-md" src={props.url} alt="img" />
-      <h3 className="text-left text-2xl ">title</h3>
-      <p className="text-justify">
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Dis interdum diam
-        finibus elit quam class per cras? Massa luctus ultrices quam porta
-        turpis proin. Tristique euismod nec ornare blandit posuere non. Vehicula
-     
-      </p>
+      <h3 className="text-left text-2xl px-1">{props.title}</h3>
+
+      <p className="text-justify px-1">{props.description}</p>
       <audio className="w-full" controls></audio>
     </div>
   );

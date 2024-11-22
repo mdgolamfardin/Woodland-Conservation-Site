@@ -23,6 +23,10 @@ h1 {
   color:#dceed2;
 }
 
+.shadow {
+  box-shadow: 0 8px 12px rgb(148, 148, 148);
+}
+
 /* Class to hide the mobile navigation menu */
 .hideMenuNav {
     display: none;                /* Completely hides the menu */
