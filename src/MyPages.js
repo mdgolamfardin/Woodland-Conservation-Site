@@ -23,7 +23,7 @@ export default function MyPages() {
         {/* Main route for the application, with `Layout` as the parent component */}
         <Route path="/" element={<Layout />}>
           {/* Sub-route for the homepage (`index` represents the default path `/`) */}
-          <Route index element={<About />} />
+          <Route index element ={<About />} />
           {/* Route for the `/gallery` path, displaying the `Gallery` component */}
           <Route path="gallery" element={<Gallery />} />
           {/* Route for the `/ecosystem` path, displaying the `Ecosystem` component */}

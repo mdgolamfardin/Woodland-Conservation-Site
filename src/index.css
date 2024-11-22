@@ -15,6 +15,14 @@ body {
   font-family:Arial, Helvetica, sans-serif;           /* Sets the font to Calibri */
 }
 
+h1 {
+  color: #EED3B1;
+}
+
+.highlight {
+  color:#dceed2;
+}
+
 /* Class to hide the mobile navigation menu */
 .hideMenuNav {
     display: none;                /* Completely hides the menu */

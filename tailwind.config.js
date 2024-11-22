@@ -5,7 +5,12 @@ module.exports = {
     extend: {
       colors: {
         navbarBg: '#1F4529',
+        headingClr: '#47663B',
+        navClr: '#DCEEE1',
       },
+      fontFamily: {
+        nunito: ['Nunito', 'sans-serif'],
+      }
     },
   },
   plugins: [],
