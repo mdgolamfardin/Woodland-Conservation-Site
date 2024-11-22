@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-  color: #EED3B1;
+  text-shadow: 0 5px 10px rgb(207, 207, 207);
 }
 
 .highlight {

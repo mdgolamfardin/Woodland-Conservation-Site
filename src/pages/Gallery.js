@@ -6,10 +6,10 @@ import ImgUpload from "./subcomponents/ImgUpload";
 const Gallery = () => {
     return (
         // Return the JSX to render the Gallery component
-        <div className="absolute left-10 top-20">
+        <div className="flex-row items-center text-center">
             {/* A heading to describe the Gallery component */}
-            <h1 className="break-normal font-semibold text-7xl text-blue-900">
-                The Gallery will have two subcomponents:
+            <h1 className="break-normal font-semibold text-6xl text-headingClr my-5">
+                Gallery
             </h1>
 
             {/* Render the FloraFaunaFungi subcomponent */}

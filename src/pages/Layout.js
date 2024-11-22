@@ -8,7 +8,7 @@ export default function Layout() {
   // `setIsNavOpen` is used to update the value of `isNavOpen`
   const [isNavOpen, setIsNavOpen] = useState(false);
   const location = useLocation(); // Get the current URL path
-  const [activeTab, setActiveTab] = useState("about"); // Default active tab
+  const [activeTab, setActiveTab] = useState(location.pathname); // Default active tab
 
 
   const handleTabClick = (tabName) => {
@@ -16,9 +16,9 @@ export default function Layout() {
   };
 
   return (
-    <div className="flex w-full"> {/* Container for the navigation and main content */}
+    <div className="w-full"> {/* Container for the navigation and main content */}
       <nav className="flex bg-navbarBg w-full">
-        <h1 className="font-nunito text-4xl font-bold pl-24 w-full pt-6 pb-3">Woodland Conservation</h1>
+        <h2 className="font-nunito text-titleClr text-4xl font-bold pl-32 w-full pt-6 pb-3">Woodland Conservation</h2>
         {/* MOBILE MENU SECTION */}
         <section className="MOBILE-MENU flex lg:hidden"> {/* Mobile menu visible only on small screens */}
           <div
@@ -74,34 +74,34 @@ export default function Layout() {
         </section>
 
         {/* DESKTOP MENU SECTION */}
-        <ul className="DESKTOP-MENU relative top-3 hidden space-x-8 lg:flex justify-end pt-6 pb-3 pr-28 w-full"> {/* Visible only on large screens */}
+        <ul className="DESKTOP-MENU  hidden space-x-8 lg:flex justify-end pt-9 pb-3 pr-32 w-full"> {/* Visible only on large screens */}
           <li>
-            <Link to="/" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "about" ? "highlight font-bold " : "text-white"
-              }`} onClick={() => handleTabClick("about")}
+            <Link to="/" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "/" ? "highlight font-bold " : "text-white"
+              }`} onClick={() => handleTabClick("/")}
             >
               About</Link>
           </li>
           <li>
-            <Link to="/gallery" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "gallery" ? "highlight text-xl font-bold " : "text-white"
-              }`} onClick={() => handleTabClick("gallery")}
+            <Link to="/gallery" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "/gallery" ? "highlight text-xl font-bold " : "text-white"
+              }`} onClick={() => handleTabClick("/gallery")}
             >
               Gallery</Link>
           </li>
           <li>
-            <Link to="/ecosystem" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "ecosystem" ? "highlight font-bold " : "text-white"
-              }`} onClick={() => handleTabClick("ecosystem")}
+            <Link to="/ecosystem" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "/ecosystem" ? "highlight font-bold " : "text-white"
+              }`} onClick={() => handleTabClick("/ecosystem")}
             >
               Ecosystem</Link>
           </li>
           <li>
-            <Link to="/sitemap" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "sitemap" ? "highlight font-bold " : "text-white"
-              }`} onClick={() => handleTabClick("sitemap")}
+            <Link to="/sitemap" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "/sitemap" ? "highlight font-bold " : "text-white"
+              }`} onClick={() => handleTabClick("/sitemap")}
             >
               Site Map</Link>
           </li>
           <li>
-            <Link to="/contact" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "contact" ? "highlight font-bold " : "text-white"
-              }`} onClick={() => handleTabClick("contact")}
+            <Link to="/contact" className={`text-white text-xl hover:text-gray-300 transition-colors duration-200 ${activeTab === "/contact" ? "highlight font-bold " : "text-white"
+              }`} onClick={() => handleTabClick("/contact")}
             >
               Contact</Link>
           </li>
@@ -109,7 +109,7 @@ export default function Layout() {
       </nav>
 
       {/* Main content of the current route */}
-      <div className="pt-4">
+      <div className="pt-4 px-28">
         <Outlet /> {/* Placeholder for the child route components */}
       </div>
     </div>

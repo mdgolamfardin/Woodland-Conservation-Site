@@ -7,6 +7,8 @@ module.exports = {
         navbarBg: '#1F4529',
         headingClr: '#47663B',
         navClr: '#DCEEE1',
+        titleClr: "#EED3B1",
+        subClr: "#393E46"
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
