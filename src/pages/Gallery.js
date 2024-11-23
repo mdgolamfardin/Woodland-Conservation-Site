@@ -8,7 +8,7 @@ const Gallery = () => {
         // Return the JSX to render the Gallery component
         <div className="flex-row items-center text-center">
             {/* A heading to describe the Gallery component */}
-            <h1 className="break-normal font-semibold text-6xl text-headingClr my-5">
+            <h1 className="break-normal font-semibold text-6xl text-headingClr mt-8 bm-4">
                 Gallery
             </h1>
 

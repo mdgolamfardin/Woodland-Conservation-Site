@@ -30,7 +30,7 @@ function Layer(props) {
       <h2 className="text-left text-4xl font-bold text-subClr mb-5 pl-4">
         {props.heading}
       </h2>
-      <div className="grid grid-cols-3 gap-10 2xl:gap-20">
+      <div className="grid grid-cols-3 gap-10 2xl:grid-cols-4 ">
         {visibleData.map((imgInfo) => createImageCard(imgInfo))}
       </div>
       <button
