@@ -30,12 +30,12 @@ function Layer(props) {
       <h2 className="text-left text-4xl font-bold text-subClr mb-5 pl-4">
         {props.heading}
       </h2>
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid grid-cols-3 gap-10 2xl:gap-20">
         {visibleData.map((imgInfo) => createImageCard(imgInfo))}
       </div>
       <button
         onClick={toggleShowMore}
-        className="mt-10 bg-white text-xl text-gray-600 px-6 py-3 rounded-full hover:bg-gray-200"
+        className="mt-16 mb-4 bg-white text-xl text-gray-600 px-6 py-3 rounded-full hover:bg-gray-200"
       >
         {showMore ? "Show Less" : "Show More"}
       </button>

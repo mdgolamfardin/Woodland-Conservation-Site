@@ -109,7 +109,7 @@ export default function Layout() {
       </nav>
 
       {/* Main content of the current route */}
-      <div className="pt-4 px-28">
+      <div className="pt-4 px-28 2xl:px-52">
         <Outlet /> {/* Placeholder for the child route components */}
       </div>
     </div>
