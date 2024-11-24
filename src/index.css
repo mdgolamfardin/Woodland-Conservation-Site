@@ -12,6 +12,8 @@ The purpose of this file is to use some plain CSS to simplify the code.
 body {
   background-color: #eceee2;
   margin: 0;                      /* Removes default margin around the page */
+  padding: 0;
+  box-sizing: border-box;
   font-family:Arial, Helvetica, sans-serif;           /* Sets the font to Calibri */
 }
 
