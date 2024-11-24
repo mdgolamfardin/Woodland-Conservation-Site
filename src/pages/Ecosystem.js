@@ -19,7 +19,7 @@ const toggleDarkMode = () => {
 
 return (
   <div
-    className={`w-screen min-h-screen transition-colors duration-300 ${
+    className={`min-h-screen transition-colors duration-300 ${
       darkMode ? "bg-gray-900 text-gray-100" : "bg-transparent text-gray-900"
     }`}
   >
@@ -37,8 +37,7 @@ return (
 
     {/* Main Title Section */}
     <div className="text-center py-8">
-      <h1 className="text-4xl font-bold">Woodland Conservation Site</h1>
-      <h2 className="text-2xl italic mt-2">EcoSystem</h2>
+      <h1 className="text-2xl italic mt-2">EcoSystem:A Living Testament to Nature and History</h1>
     </div>
 
     {/* Content Section */}
@@ -46,11 +45,15 @@ return (
       {/* Left Content Block */}
       <div>
         <p className="text-lg mb-4" style={{ fontSize: "20px" }} >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur.
+        This woodland conservation site is home to an extraordinary array
+            of natural and historical treasures. The towering Yellow Birch trees
+            provide shade and shelter for countless species, playing a key role
+            in the forest's ecosystem. The site also includes wetlands, a
+            critical habitat that supports biodiversity, regulates water flow,
+            and filters pollutants. The wetland area is a serene reminder of
+            nature’s resilience and its importance to the environment. Together,
+            these features make the site a haven for both wildlife and
+            eco-conscious visitors.
         </p>
         <div className="relative">
           <img
@@ -77,12 +80,15 @@ return (
           </button>
         </div>
         <p className="text-lg mb-4" style={{ fontSize: "20px" }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+        Beyond its natural beauty, this conservation site also holds
+            historical significance. Evidence of a farmhouse and ancient wells
+            provides a glimpse into the lives of those who lived here
+            generations ago. These artifacts are a testament to the human
+            connection with the land and serve as a reminder of the importance
+            of preserving history alongside nature. Visitors can explore these
+            relics, marveling at how the site weaves together past and present
+            in a truly unique way. Whether drawn by the Yellow Birch, wetlands,
+            or historical artifacts, there is something here for everyone.
         </p>
       </div>
     </div>
