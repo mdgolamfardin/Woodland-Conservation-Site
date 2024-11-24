@@ -16,16 +16,27 @@ body {
 }
 
 h1 {
-  text-shadow: 0 5px 10px rgb(207, 207, 207);
+  text-shadow: 0 3px 5px rgb(207, 207, 207);
+}
+
+nav {
+  display: fixed;
+  padding-top: 5px;
 }
 
 .highlight {
   color:#dceed2;
 }
+.custom-scale:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgb(148, 148, 148);
+}
 
 .shadow {
-  box-shadow: 0 8px 12px rgb(148, 148, 148);
+  box-shadow: 0 6px 8px rgb(148, 148, 148);
 }
+
+
 
 /* Class to hide the mobile navigation menu */
 .hideMenuNav {

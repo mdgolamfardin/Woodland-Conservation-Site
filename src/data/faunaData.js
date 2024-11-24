@@ -1,7 +1,9 @@
-var loremIpsum =
-  "Lorem ipsum odor amet, consectetuer adipiscing elit. Dis interdum diamfinibus elit quam class per cras? Massa luctus ultrices quam portaturpis proin. Tristique euismod nec ornare blandit posuere non.";
+var loremIpsum = "Lorem ipsum odor amet, consectetuer adipiscing elit. Dis interdum diamfinibus elit quam class per cras? Massa luctus ultrices quam portaturpis proin. Tristique euismod nec ornare blandit posuere non.";
 
 var picsum = "https://picsum.photos/400/300"
+var picsum2 = "https://picsum.photos/500/400"
+var picsum3 = "https://picsum.photos/400/400"
+var picsum4 = "https://picsum.photos/200/250"
 
 const faunaData = [
     {
@@ -12,19 +14,19 @@ const faunaData = [
     },
     {
         id: 2,
-        url: picsum,
+        url: picsum2,
         title: "title",
         description: loremIpsum,        
     },
     {
         id: 3,
-        url: picsum,
+        url: picsum3,
         title: "title",
         description: loremIpsum,        
     },
     {
         id: 4,
-        url: picsum,
+        url: picsum4,
         title: "title",
         description: loremIpsum,        
     },
