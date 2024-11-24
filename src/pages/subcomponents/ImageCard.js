@@ -70,7 +70,10 @@ function ImageCard(props) {
             <div className="bg-bgClr basis-1/3 h-full rounded-r-2xl p-6 flex flex-col justify-between">
               {/* Top Right "X" Button */}
               <div className="flex justify-end">
-                <button className="text-gray-400 hover:text-gray-700 transition-colors">
+                <button
+                  onClick={handleCloseModal} // Close the modal when the button is clicked
+                  className="text-gray-400 hover:text-gray-700 transition-colors"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"

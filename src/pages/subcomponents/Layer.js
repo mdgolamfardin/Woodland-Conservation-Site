@@ -46,7 +46,7 @@ function Layer(props) {
       </motion.div>
       <button
         onClick={toggleShowMore}
-        className="mt-12 mb-6 bg-white text-xl text-gray-600 px-6 py-3 rounded-full hover:bg-gray-200"
+        className="mt-8 mb-6 bg-white text-xl text-gray-600 px-6 py-3 rounded-full hover:bg-gray-200"
       >
         {showMore ? "Show Less" : "Show More"}
       </button>
