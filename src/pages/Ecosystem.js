@@ -80,7 +80,7 @@ return (
           </button>
         </div>
         <p className="text-lg mb-4" style={{ fontSize: "20px" }}>
-        Beyond its natural beauty, this conservation site also holds
+          Beyond its natural beauty, this conservation site also holds
             historical significance. Evidence of a farmhouse and ancient wells
             provides a glimpse into the lives of those who lived here
             generations ago. These artifacts are a testament to the human
