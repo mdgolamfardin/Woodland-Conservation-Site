@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 function ImageCard(props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [imageClass, setImageClass] = useState(""); // Dynamically apply `w-full` or `h-full`
@@ -36,15 +35,22 @@ function ImageCard(props) {
     <div className="relative flex-row space-y-4 bg-white smshadow rounded-xl my-2">
       {/* Main Image Container */}
       <div
-        className="h-52 overflow-hidden rounded-xl transition-transform duration-300
-                    custom-scale hover:cursor-pointer hover:border-white hover:border-2"
+        className="custom-scale relative group h-52 overflow-hidden rounded-xl transition-transform duration-300 hover:cursor-pointer "
         onClick={handleImageClick} // Open modal on click
       >
+        {/* Image */}
         <img
           className="w-full h-full object-cover object-[50%_50%] rounded-md"
           src={props.url}
           alt="img"
         />
+
+        {/* Title Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <h3 className="text-white text-2xl font-bold mb-4 transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
+            {props.title}
+          </h3>
+        </div>
       </div>
 
       {/* Modal */}
@@ -98,6 +104,7 @@ function ImageCard(props) {
               {/* Bottom Audio Player */}
               <div className="w-full mt-4">
                 <audio
+                  src={props.aud}
                   className="w-full rounded-full bg-gray-200 shadow-md"
                   controls
                 ></audio>

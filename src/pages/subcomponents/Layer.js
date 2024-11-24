@@ -7,6 +7,7 @@ function createImageCard(imgInfo) {
     <ImageCard
       key={imgInfo.id} // Ensure each ImageCard has a unique key
       url={imgInfo.url}
+      aud={imgInfo.aud}
       title={imgInfo.title}
       description={imgInfo.description}
     />
