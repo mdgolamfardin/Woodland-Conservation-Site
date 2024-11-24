@@ -8,7 +8,8 @@ module.exports = {
         headingClr: '#47663B',
         navClr: '#DCEEE1',
         titleClr: "#EED3B1",
-        subClr: "#393E46"
+        subClr: "#393E46",
+        bgClr: "#edeeea"
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],

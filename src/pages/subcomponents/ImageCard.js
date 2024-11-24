@@ -54,20 +54,52 @@ function ImageCard(props) {
           onClick={handleCloseModal} // Close modal on clicking outside
         >
           <div
-            className="bg-white w-[1100px] h-[670px] rounded-xl flex flex-row items-stretch"
+            className="bg-white w-[1100px] h-[700px] rounded-2xl flex flex-row items-stretch shadow-2xl transition-all duration-300"
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
           >
-            {/* Black Section */}
-            <div className="bg-black basis-2/3 rounded-l-xl border-2 border-black flex items-center justify-center">
+            {/* Left Black Section */}
+            <div className="bg-black basis-2/3 rounded-l-2xl border-[1px] border-gray-300 flex items-center justify-center overflow-hidden">
               <img
-                className={`big-img ${imageClass} object-contain`}
+                className={`big-img ${imageClass} object-cover`}
                 src={props.url}
                 alt="modal-img"
               />
             </div>
 
-            {/* Red Section */}
-            <div className="bg-white basis-1/3 h-full rounded-r-xl"></div>
+            {/* Right White Section */}
+            <div className="bg-bgClr basis-1/3 h-full rounded-r-2xl p-6 flex flex-col justify-between">
+              {/* Top Right "X" Button */}
+              <div className="flex justify-end">
+                <button className="text-gray-400 hover:text-gray-700 transition-colors">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Centered Title and Description */}
+              <div className="bg-white rounded-xl py-8 px-6 flex flex-col items-center text-center shadow-md">
+                <h2 className="text-3xl font-bold text-gray-800 tracking-wide">
+                  {props.title}
+                </h2>
+                <p className="mt-6 text-gray-600 text-lg leading-relaxed">
+                  {props.description}
+                </p>
+              </div>
+
+              {/* Bottom Audio Player */}
+              <div className="w-full mt-4">
+                <audio
+                  className="w-full rounded-full bg-gray-200 shadow-md"
+                  controls
+                ></audio>
+              </div>
+            </div>
           </div>
         </div>
       )}
